@@ -11,7 +11,7 @@ public class SignUpFirstPage extends BasePage{
     WebElement title;
 
     @FindBy(xpath = "//select[@id ='title']")
-    WebElement titleDropDown = driver.findElement(By.xpath("//select[@id ='title']"));
+    WebElement titleDropDown;
 
     @FindBy(xpath = "//input[@id ='firstName']")
     WebElement firstName;
@@ -44,8 +44,8 @@ public class SignUpFirstPage extends BasePage{
         lastName.sendKeys("SuperManych");
         gender.click();
         dob.sendKeys("01/01/2000");
-        ssn.sendKeys("111223434");
-        eMail.sendKeys("superman@gmail.com");
+        ssn.sendKeys("911223434");
+        eMail.sendKeys("superman1@gmail.com");
         password.sendKeys("Testerok101");
         confirmPassword.sendKeys("Testerok101");
 
