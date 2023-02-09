@@ -39,7 +39,7 @@ public class SignUpSteps {
 
     @When("user click on Next button")
     public void user_click_on_next_button() {
-
+        signUpFirstPage.clickNextBtn();
     }
 
     @Then("verify user on signup second page")
@@ -49,13 +49,13 @@ public class SignUpSteps {
 
     @When("user fills out all required fields on second page")
     public void user_fills_out_all_required_fields_on_second_page() {
-
+        signUpSecondPage.enterData2();
     }
 
 
     @When("user click on Register button")
     public void user_click_on_register_button() {
-
+        signUpSecondPage.clickRegisterBtn();
     }
 
     @Then("verify user see Registration Successful message")
