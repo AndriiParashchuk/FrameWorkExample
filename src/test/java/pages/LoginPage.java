@@ -21,6 +21,7 @@ public class LoginPage extends BasePage {
 
     public void clickSignInBtn(){
         submitBtn.click();
+
     }
 
 
