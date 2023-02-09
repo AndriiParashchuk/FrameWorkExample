@@ -50,6 +50,8 @@ public class SignUpFirstPage extends BasePage{
         confirmPassword.sendKeys("Testerok101");
 
     }
+
+
     public void clickNextBtn(){
         nextBtn.click();
     }

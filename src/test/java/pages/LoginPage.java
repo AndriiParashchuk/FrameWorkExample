@@ -16,7 +16,7 @@ public class LoginPage extends BasePage {
     @FindBy(id = "submit")
     WebElement submitBtn;
 
-    @FindBy(xpath = "//a[contains(text(),' Sign Up Here')]")
+    @FindBy(xpath = "//a[@href='/bank/signup']")
     WebElement signUpHereLink;
 
 

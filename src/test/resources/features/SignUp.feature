@@ -9,7 +9,7 @@ Feature: Sign up feature
     Then verify user on signup second page
     When user fills out all required fields on second page
     And user click on Register button
-    Then verify user see Registration Successful message
+    Then verify user can see Registration Successful message
     When user enter valid password
     And user clicks on Sign In button
     Then verify user on Home Page

@@ -4,16 +4,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import pages.HomePage;
-import pages.LoginPage;
-import pages.SignUpFirstPage;
-import pages.SignUpSecondPage;
+import pages.*;
 
 public class SignUpSteps {
     LoginPage loginPage = new LoginPage();
     SignUpFirstPage signUpFirstPage = new SignUpFirstPage();
     SignUpSecondPage signUpSecondPage = new SignUpSecondPage();
     HomePage homePage = new HomePage();
+    RegisterPage registerPage = new RegisterPage();
 
     @Given("verify user is on login page")
     public void verify_user_is_on_login_page() {
@@ -58,14 +56,14 @@ public class SignUpSteps {
         signUpSecondPage.clickRegisterBtn();
     }
 
-    @Then("verify user see Registration Successful message")
+    @Then("verify user can see Registration Successful message")
     public void verify_user_see_registration_successful_message() {
-
+        registerPage.verifySuccessMessage();
     }
 
     @When("user enter valid password")
     public void user_enter_valid_password() {
-
+        registerPage.enterValidPassword();
     }
 
     @Then("verify user on Home Page")
