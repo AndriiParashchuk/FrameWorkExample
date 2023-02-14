@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utilities.ConfigReader;
 
 public class LoginPage extends BasePage {
 
@@ -23,6 +24,10 @@ public class LoginPage extends BasePage {
     public void enterValidLoginInfo(){
         usernameInput.sendKeys("test1@gmail.com");
         passwordInput.sendKeys("TestPass1234");
+    }
+    public void enterValidLoginInfo(String username, String password){
+        usernameInput.sendKeys(ConfigReader.getConfigProperties(username));
+        passwordInput.sendKeys(ConfigReader.getConfigProperties(password));
     }
 
     public void clickSignInBtn(){

@@ -11,9 +11,9 @@ public class LoginSteps {
     LoginPage loginPage = new LoginPage();
     HomePage homePage = new HomePage();
 
-    @Given("user enter valid username and password")
-    public void user_enter_valid_username_and_password() {
-        loginPage.enterValidLoginInfo();
+    @Given("user enter valid {string} and {string}")
+    public void user_enter_valid_username_and_password(String username,String password) {
+        loginPage.enterValidLoginInfo(username,password);
 
     }
     @When("user clicks on Sign In button")
